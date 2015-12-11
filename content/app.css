@@ -1,0 +1,36 @@
+.header {
+  position: relative;
+  height: 20em;
+  overflow: hidden;
+}
+@media (min-width: 50em) {
+  .header {
+    height: 35em;
+  }
+}
+.header img {
+  width: 100%;
+}
+.header .title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.6;
+  color: #fff;
+}
+.header .title h1,
+.header .title .subtitle {
+  display: inline-block;
+}
+.header .title h1 {
+  margin-right: 0.4em;
+  margin-bottom: 0;
+}
+.header .title .subtitle {
+  font-size: 1.4em;
+}
+.header h1 {
+  color: #fff;
+}
