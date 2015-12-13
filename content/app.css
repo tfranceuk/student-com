@@ -3,13 +3,11 @@
   height: 20em;
   overflow: hidden;
 }
-@media (min-width: 992px) {
-  .header {
-    height: 30em;
-  }
-}
 .header img {
   width: 100%;
+}
+.header h1 {
+  color: #fff;
 }
 .header .title {
   position: absolute;
@@ -31,8 +29,10 @@
 .header .title .subtitle {
   font-size: 1.4em;
 }
-.header h1 {
-  color: #fff;
+@media (min-width: 992px) {
+  .header {
+    height: 30em;
+  }
 }
 #room-types-container-one {
   position: relative;
@@ -44,9 +44,7 @@
   transition: opacity 1s ease;
   opacity: 1;
 }
-#room-types-container-one .in {
-  opacity: 0;
-}
+#room-types-container-one .in,
 #room-types-container-one .out {
   opacity: 0;
 }
