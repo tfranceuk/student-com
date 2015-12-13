@@ -35,12 +35,16 @@
 #room-types-container-one
 	position relative
 	.active
-		transition 7s transform ease
+		// transition 7s transform ease
 		position absolute
-		display block
+		// display block
 		top 0
 		left 0
+		transition opacity 1s ease
+		opacity 1
 	.in
-		transform translate3d(100%, 0, 0)
+		// transform translate3d(100%, 0, 0)
+		opacity 0
 	.out
-		transform translate3d(-100%, 0, 0)
+		// transform translate3d(-100%, 0, 0)
+		opacity 0
