@@ -1,3 +1,6 @@
+.btn-link {
+  color: #337ab7;
+}
 .header {
   position: relative;
   height: 20em;
@@ -33,6 +36,35 @@
   .header {
     height: 30em;
   }
+}
+.summary {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #eee;
+  border-radius: 4px;
+  padding: 8px;
+  text-align: center;
+  font-size: 1.2em;
+}
+.summary .glyphicon {
+  margin-right: 6px;
+}
+.facilities {
+  margin-bottom: 10px;
+}
+.facilities .glyphicon {
+  margin-right: 6px;
+}
+.room-type .actions {
+  margin-top: 23px;
+}
+.row.images {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.row.images [class^="col-"] {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 #room-types-container-one {
   position: relative;

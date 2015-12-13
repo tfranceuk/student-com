@@ -9,7 +9,10 @@
       var bound = templateString
         .replace('{{name}}', k)
         .replace('{{friends}}', getFriendsString(friends));
-      templates.push({name: k, template: $(bound)});
+      var template = $(bound);
+      if (!friends.length)
+        $('p.friends', template).remove();
+      templates.push({name: k, template: template});
     }
 
     attachFancybox(templates);
