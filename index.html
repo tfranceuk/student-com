@@ -33,7 +33,13 @@
       </div>
       <h2>Rooms</h2>
       <div class="row hidden-xs hidden-sm" id="room-types-container-all"></div>
-      <div id="room-types-container-one"></div>
+      <div class="hidden-md hidden-lg">
+        <div class="form-group">
+          <select class="form-control" id="room-types-select">
+          </select>
+        </div>
+        <div id="room-types-container-one"></div>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -80,7 +86,7 @@
           <h4>Facilities</h4>
           <div class="row">
             <div class="col-xs-12 col-sm-6 col-lg-4"><i class="glyphicon glyphicon-check" /> Wifi</div>
-            <div class="col-xs-12 col-sm-6 col-lg-4"><i class="glyphicon glyphicon-check" /> Wifi</div>
+            <div class="col-xs-12 col-sm-6 col-lg-4"><i class="glyphicon glyphicon-unchecked" /> Wifi</div>
             <div class="col-xs-12 col-sm-6 col-lg-4"><i class="glyphicon glyphicon-check" /> Wifi</div>
             <div class="col-xs-12 col-sm-6 col-lg-4"><i class="glyphicon glyphicon-check" /> Wifi</div>
           </div>
