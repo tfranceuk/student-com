@@ -1,0 +1,25 @@
+{
+  "name": "fancybox3",
+  "main": [
+    "jquery.fancybox.css",
+    "jquery.fancybox.js"
+  ],
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "jquery": ">=1.10"
+  },
+  "homepage": "https://github.com/FelipeMarcos/fancybox3-bower",
+  "_release": "55b9abcfde",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "55b9abcfded916e02807df5c4217f2ce9237c843"
+  },
+  "_source": "git://github.com/FelipeMarcos/fancybox3-bower.git",
+  "_target": "*",
+  "_originalSource": "fancybox3",
+  "_direct": true
+}

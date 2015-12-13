@@ -12,6 +12,8 @@
       templates.push({name: k, template: $(bound)});
     }
 
+    attachFancybox(templates);
+
     return templates;
 
     function getFriendsString(friends) {
@@ -22,6 +24,12 @@
         case 3: return `${friends[0]}, ${friends[1]}, and 1 other friend have stayed here`;
         case 4: return `${friends[0]}, ${friends[1]}, and ${friends.length-2} other friends have stayed here`;
       }
+    }
+
+    function attachFancybox(templates) {
+      templates.forEach(x => {
+        $('.images .fancybox', x.template).attr('rel', x.name).fancybox();
+      });
     }
   }
 

@@ -1,0 +1,15 @@
+{
+    "name": "fancybox3",
+    "version": "3.0.0",
+    "main": [
+        "jquery.fancybox.css",
+        "jquery.fancybox.js"
+    ],
+    "ignore": [
+        ".jshintrc",
+        "**/*.txt"
+    ],
+    "dependencies": {
+        "jquery": ">=1.10"
+    }
+}

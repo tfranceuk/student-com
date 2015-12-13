@@ -1,0 +1,22 @@
+{
+  "name": "take-home-task",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Tom France <tfranceuk@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fancybox3": "*"
+  }
+}
