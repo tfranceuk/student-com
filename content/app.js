@@ -36,7 +36,7 @@
       // var bound = templateString
       //   .replace('{{name}}', k)
       //   .replace('{{friends}}', getFriendsString(friends));
-      var bound = template({name: k, friends: getFriendsString(friends)});
+      var bound = template({name: k, friends: getFriendsString(friends), images: roomTypes[k].images});
       var element = $(bound);
 
       //remove friends element from template, if no friends

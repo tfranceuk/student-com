@@ -113,11 +113,19 @@
             "Jane Doe",
             "Bubba Hyde",
             "Betsy Toheavens"
+          ],
+          "images": [
+            "room1.jpg",
+            "room2.jpg"
           ]
         },
         "shared": {
           "friends": [
             "Bob Smith"
+          ],
+          "images": [
+            "room1.jpg",
+            "room3.jpg"
           ]
         },
         "animal-friendly": {
@@ -125,16 +133,30 @@
             "Bob Smith",
             "Jane Doe",
             "Bubba Hyde"
+          ],
+          "images": [
+            "room2.jpg",
+            "room3.jpg"
           ]
         },
         "another": {
           "friends": [
             "Bob Smith",
             "Jane Doe"
+          ],
+          "images": [
+            "room3.jpg",
+            "room2.jpg",
+            "room1.jpg",
+            "room2.jpg"
           ]
         },
         "and-another": {
-          "friends": []
+          "friends": [],
+          "images": [
+            "room3.jpg",
+            "room1.jpg"
+          ]
         }
       }
     </script>
@@ -150,21 +172,13 @@
           <span class="glyphicon glyphicon-thumbs-up"></span> 2 people would recommend these rooms
         </p>
         <div class="images row">
+          {{#each images}}
           <div class="col-xs-6 col-sm-4">
-            <a href="content/images/room1.jpg" class="thumbnail fancybox">
-              <img src="content/images/room1.jpg" alt="room1" />
+            <a href="content/images/{{this}}" class="thumbnail fancybox" rel="{{name}}">
+              <img src="content/images/{{this}}" alt="room1" />
             </a>
           </div>
-          <div class="col-xs-6 col-sm-4">
-            <a href="content/images/room2.jpg" class="thumbnail fancybox">
-              <img src="content/images/room2.jpg" alt="room2" />
-            </a>
-          </div>
-          <div class="col-xs-6 col-sm-4">
-            <a href="content/images/room3.jpg" class="thumbnail fancybox">
-              <img src="content/images/room3.jpg" alt="room3" />
-            </a>
-          </div>
+          {{/each}}
         </div>
       </div>
     </script>
