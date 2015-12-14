@@ -1,0 +1,22 @@
+{
+  "name": "student-com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "host.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tfranceuk/student-com.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tfranceuk/student-com/issues"
+  },
+  "homepage": "https://github.com/tfranceuk/student-com#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
