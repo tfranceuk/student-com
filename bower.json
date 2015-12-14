@@ -17,6 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "fancybox3": "*"
+    "fancybox3": "*",
+    "jquery": "~2.1.4"
   }
 }
