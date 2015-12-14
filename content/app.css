@@ -3,7 +3,7 @@
 }
 .header {
   position: relative;
-  height: 20em;
+  height: 18em;
   overflow: hidden;
 }
 .header img {
@@ -31,6 +31,11 @@
 }
 .header .title .subtitle {
   font-size: 1.4em;
+}
+@media (min-width: 768px) {
+  .header {
+    height: 22em;
+  }
 }
 @media (min-width: 992px) {
   .header {
