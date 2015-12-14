@@ -49,6 +49,10 @@
 .summary .glyphicon {
   margin-right: 6px;
 }
+.about,
+.facilities {
+  font-size: 1.2em;
+}
 .facilities {
   margin-bottom: 10px;
 }
