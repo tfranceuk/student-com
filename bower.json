@@ -18,6 +18,7 @@
   ],
   "dependencies": {
     "fancybox3": "*",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "handlebars": "~4.0.5"
   }
 }
