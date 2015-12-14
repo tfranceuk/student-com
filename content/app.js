@@ -1,4 +1,23 @@
 (function() {
+
+  //============================
+  //setup page on document ready
+  //============================
+  $(function() {
+    //build array of jquery elements from binding friends.json data to a template
+    var templates = buildTemplates();
+
+    //append a clone of each template to the room types desktop content area
+    initialiseDesktopContainer(templates);
+
+    //initialise the room types mobile content area,
+    // and attach listeners to react to user selection and animations
+    initialiseMobileContainer(templates);
+  });
+
+  //------------------
+  //delegate functions
+  //------------------
   function buildTemplates() {
     //get and parse friends.json
     var roomTypes = JSON.parse($('script[type="application/json"]#friends-json').text());
@@ -95,17 +114,5 @@
     //append to DOM
     container.append(current);
   }
-
-  $(function() {
-    //build array of jquery elements from binding friends.json data to a template
-    var templates = buildTemplates();
-
-    //append a clone of each template to the room types desktop content area
-    initialiseDesktopContainer(templates);
-
-    //initialise the room types mobile content area,
-    // and attach listeners to react to user selection and animations
-    initialiseMobileContainer(templates);
-  });
 })();
 
