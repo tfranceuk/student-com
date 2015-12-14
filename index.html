@@ -108,51 +108,66 @@
     <script type="application/json" id="friends-json">
       {
         "deluxe": {
+          "name": "Deluxe",
+          "subtitle": "A premium room",
           "friends": [
             "Bob Smith",
             "Jane Doe",
             "Bubba Hyde",
             "Betsy Toheavens"
           ],
-          "images": [
-            "room1.jpg",
-            "room2.jpg"
-          ]
-        },
-        "shared": {
-          "friends": [
-            "Bob Smith"
-          ],
+          "recommends": 2,
           "images": [
             "room1.jpg",
             "room3.jpg"
           ]
         },
+        "shared": {
+          "name": "Shared",
+          "subtitle": "Save a few pennies and share with someone",
+          "friends": [
+            "Bob Smith"
+          ],
+          "recommends": 5,
+          "images": [
+            "room1.jpg",
+            "room2.jpg"
+          ]
+        },
         "animal-friendly": {
+          "name": "Animal Friendly",
+          "subtitle": "Have a pet? Bring them along",
           "friends": [
             "Bob Smith",
             "Jane Doe",
             "Bubba Hyde"
           ],
+          "recommends": 3,
           "images": [
             "room2.jpg",
             "room3.jpg"
           ]
         },
         "another": {
+          "name": "Another",
+          "subtitle": "Another room type",
           "friends": [
             "Bob Smith",
             "Jane Doe"
           ],
+          "recommends": 8,
           "images": [
+            "room1.jpg",
             "room3.jpg",
             "room2.jpg",
-            "room1.jpg",
             "room2.jpg"
           ]
         },
         "and-another": {
+          "name": "And Another",
+          "subtitle": "And another room type",
           "friends": [],
+          "recommends": 4,
           "images": [
             "room3.jpg",
             "room1.jpg"
@@ -161,16 +176,22 @@
       }
     </script>
     <script type="text/template" id="room-type">
-      <div class="col-xs-12 col-md-6 room-type">
+      <div class="col-xs-12 room-type">
         <div class="pull-right actions">
           <button type="button" class="btn btn-link">Enquire</button>
         </div>
-        <h3>{{name}}</h3>
+        <h3>{{name}} <small>{{subtitle}}</small></h3>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p class="friends"><i class="glyphicon glyphicon-user" /> {{friends}}</p>
-        <p>
-          <span class="glyphicon glyphicon-thumbs-up"></span> 2 people would recommend these rooms
-        </p>
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <p class="friends"><i class="glyphicon glyphicon-user" /> {{friends}}</p>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <p>
+              <span class="glyphicon glyphicon-thumbs-up"></span> {{recommends}} people would recommend these rooms
+            </p>
+          </div>
+        </div>
         <div class="images row">
           {{#each images}}
           <div class="col-xs-6 col-sm-4">

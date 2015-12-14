@@ -32,11 +32,10 @@
       //sort alphabetically
       var friends = roomTypes[k].friends.sort();
 
-      //bind data to template
-      // var bound = templateString
-      //   .replace('{{name}}', k)
-      //   .replace('{{friends}}', getFriendsString(friends));
-      var bound = template({name: k, friends: getFriendsString(friends), images: roomTypes[k].images});
+      //bind data to template and create jquery element
+      var model = $.extend({}, roomTypes[k]);
+      model.friends = getFriendsString(friends);
+      var bound = template(model);
       var element = $(bound);
 
       //remove friends element from template, if no friends
