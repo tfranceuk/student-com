@@ -1,4 +1,4 @@
-(function() {
+(function($, Handlebars) {
 
   //============================
   //setup page on document ready
@@ -23,6 +23,8 @@
     var roomTypes = JSON.parse($('script[type="application/json"]#friends-json').text());
     //get room type view template
     var templateString = $('script[type="text/template"]#room-type').html();
+    //use of handlebars for templating and rendering
+    var template = Handlebars.compile(templateString);
 
     //for each room type, build template, and push onto array
     var templates = [];
@@ -30,18 +32,18 @@
       //sort alphabetically
       var friends = roomTypes[k].friends.sort();
 
-      //bind data to template
-      var bound = templateString
-        .replace('{{name}}', k)
-        .replace('{{friends}}', getFriendsString(friends));
-      var template = $(bound);
+      //bind data to template and create jquery element
+      var model = $.extend({}, roomTypes[k]);
+      model.friends = getFriendsString(friends);
+      var bound = template(model);
+      var element = $(bound);
 
       //remove friends element from template, if no friends
       if (!friends.length)
-        $('p.friends', template).remove();
+        $('p.friends', element).remove();
 
       //push onto array
-      templates.push({name: k, template: template});
+      templates.push({name: k, template: element});
     }
 
     //attach fancybox behaviour to images in templates
@@ -114,5 +116,5 @@
     //append to DOM
     container.append(current);
   }
-})();
+})($, Handlebars);
 

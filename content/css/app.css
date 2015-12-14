@@ -67,6 +67,9 @@
 .room-type .actions {
   margin-top: 23px;
 }
+.room-type h3 small {
+  display: inline-block;
+}
 .row.images {
   margin-left: -5px;
   margin-right: -5px;
